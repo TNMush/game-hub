@@ -1,5 +1,6 @@
 import { Grid, GridItem, Show, Image, HStack, Text } from "@chakra-ui/react";
 import logo from "./Assets/logo.webp";
+import ColorModeSwitch from "./components/ColorModeSwitch";
 const App = () => {
   return (
     <>
@@ -10,9 +11,9 @@ const App = () => {
         }}
       >
         <GridItem area={"nav"}>
-          <HStack>
+          <HStack justifyContent="space-between" padding="0 20px ">
             <Image src={logo} boxSize="80px" />
-            <Text>Navigation</Text>
+            <ColorModeSwitch />
           </HStack>
         </GridItem>
         <GridItem bg={"blue.300"} area={"main"}>
