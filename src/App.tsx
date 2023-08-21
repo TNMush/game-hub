@@ -1,4 +1,5 @@
-import { Grid, GridItem, Show } from "@chakra-ui/react";
+import { Grid, GridItem, Show, Image, HStack, Text } from "@chakra-ui/react";
+import logo from "./Assets/logo.webp";
 const App = () => {
   return (
     <>
@@ -8,8 +9,11 @@ const App = () => {
           lg: `"nav nav" "aside main"`,
         }}
       >
-        <GridItem bg={"orange.300"} area={"nav"}>
-          nav
+        <GridItem area={"nav"}>
+          <HStack>
+            <Image src={logo} boxSize="80px" />
+            <Text>Navigation</Text>
+          </HStack>
         </GridItem>
         <GridItem bg={"blue.300"} area={"main"}>
           Main
