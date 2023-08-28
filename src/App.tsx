@@ -1,6 +1,7 @@
 import { Grid, GridItem, Show, Image, HStack, Text } from "@chakra-ui/react";
 import logo from "./Assets/logo.webp";
 import ColorModeSwitch from "./components/ColorModeSwitch";
+import GamesGrid from "./Services/Games-Grid";
 const App = () => {
   return (
     <>
@@ -16,13 +17,11 @@ const App = () => {
             <ColorModeSwitch />
           </HStack>
         </GridItem>
-        <GridItem bg={"blue.300"} area={"main"}>
-          Main
+        <GridItem area={"main"}>
+          <GamesGrid />
         </GridItem>
         <Show above="lg">
-          <GridItem bg={"pink.300"} area={"aside"}>
-            Aside
-          </GridItem>
+          <GridItem area={"aside"}>Aside</GridItem>
         </Show>
       </Grid>
     </>
