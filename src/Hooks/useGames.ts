@@ -1,8 +1,17 @@
+import apiClient from "../Services/api-client";
 import { useState, useEffect } from "react";
-import apiClient from "../../Services/api-client";
-interface Game {
+
+export interface Platform {
   id: number;
   name: string;
+  slug: string;
+}
+
+export interface Game {
+  id: number;
+  name: string;
+  background_image: string;
+  parent_platforms: { platform: Platform }[];
 }
 
 interface FetchGamesRes {
