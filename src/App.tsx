@@ -1,7 +1,7 @@
 import { Grid, GridItem, Show, Image, HStack, Text } from "@chakra-ui/react";
 import logo from "./Assets/logo.webp";
 import ColorModeSwitch from "./components/ColorModeSwitch";
-import GamesGrid from "./Services/Games-Grid";
+import GamesGrid from "./components/Games-Grid";
 const App = () => {
   return (
     <>
