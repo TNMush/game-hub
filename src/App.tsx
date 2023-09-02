@@ -2,6 +2,7 @@ import { Grid, GridItem, Show, Image, HStack, Text } from "@chakra-ui/react";
 import logo from "./Assets/logo.webp";
 import ColorModeSwitch from "./components/ColorModeSwitch";
 import GamesGrid from "./components/Games-Grid";
+import GenreList from "./components/GenreList";
 const App = () => {
   return (
     <>
@@ -21,7 +22,9 @@ const App = () => {
           <GamesGrid />
         </GridItem>
         <Show above="lg">
-          <GridItem area={"aside"}>Aside</GridItem>
+          <GridItem area={"aside"}>
+            <GenreList />
+          </GridItem>
         </Show>
       </Grid>
     </>
