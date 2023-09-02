@@ -6,7 +6,7 @@ const CardSkeleton = () => {
     <>
       <GameCardContainer>
         <Card height={"300px"}>
-          <Skeleton />
+          <Skeleton height={"250px"} />
           <CardBody>
             <SkeletonText />
           </CardBody>
