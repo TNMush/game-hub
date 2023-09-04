@@ -3,7 +3,10 @@ import logo from "./Assets/logo.webp";
 import ColorModeSwitch from "./components/ColorModeSwitch";
 import GamesGrid from "./components/Games-Grid";
 import GenreList from "./components/GenreList";
+import { useState } from "react";
+import { Genre } from "./Hooks/useGenres";
 const App = () => {
+  const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null);
   return (
     <>
       <Grid
@@ -13,7 +16,7 @@ const App = () => {
         }}
         templateColumns={{
           base: "1fr",
-          lg: "200px 1fr",
+          lg: "250px 1fr",
         }}
       >
         <GridItem area={"nav"}>
@@ -23,11 +26,11 @@ const App = () => {
           </HStack>
         </GridItem>
         <GridItem area={"main"}>
-          <GamesGrid />
+          <GamesGrid selectedGenre={selectedGenre} />
         </GridItem>
         <Show above="lg">
           <GridItem area={"aside"} paddingX={5}>
-            <GenreList />
+            <GenreList onSelectGenre={(genre) => setSelectedGenre(genre)} />
           </GridItem>
         </Show>
       </Grid>
